@@ -1,9 +1,17 @@
 import { createBrowserRouter } from "react-router-dom";
+import RootElement from "../pages/RootElement";
+import Home from "../pages/Home";
 
 const MainRoutes = createBrowserRouter([
     {
         path: '/',
-        element: <div className="font-jSans">Hello world!!</div>
+        element: <RootElement></RootElement>,
+        children: [
+            {
+                path: '/',
+                element: <Home></Home>
+            }
+        ]
     }
 ])
 
