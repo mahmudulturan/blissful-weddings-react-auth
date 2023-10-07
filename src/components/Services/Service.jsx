@@ -16,7 +16,7 @@ const Service = ({service}) => {
                 </div>
                 <div className='text-center'>
                 <Link to={`/services/${id}`}>
-                <button className='my-2 px-3 py-2 rounded-md bg-secondery hover:bg-accent transition duration-200 font-semibold text-contrast    text-base 2xl:text-2xl'>Show Detail</button>
+                <button className='my-2 px-3 py-2 rounded-md bg-secondery hover:bg-accent transition duration-200 font-semibold text-contrast    text-base '>Show Detail</button>
                 </Link>
                 </div>
             </div>

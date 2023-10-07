@@ -23,7 +23,7 @@ const Services = () => {
                 </div>
                 {
                     <div className={`${ displayCount===services.length? "hidden": "flex"} justify-center my-6`}>
-                    <button onClick={()=> setDisplayCount(services.length)} className='my-3 px-3 py-2 rounded-md bg-accent hover:bg-secondery transition duration-200 font-semibold text-contrast text-2xl'>See All</button>
+                    <button onClick={()=> setDisplayCount(services.length)} className='my-3 px-3 py-2 rounded-md bg-accent hover:bg-secondery transition duration-200 font-semibold text-contrast'>See All</button>
                      </div>
                 }
             </div>
