@@ -6,6 +6,7 @@ import Register from "../components/Register/Register";
 import ServicesPage from "../pages/ServicesPage";
 import GalleryPage from "../pages/GalleryPage";
 import AboutPage from "../pages/AboutPage";
+import ServicesDetail from "../components/Services/ServicesDetail";
 
 const MainRoutes = createBrowserRouter([
     {
@@ -19,6 +20,10 @@ const MainRoutes = createBrowserRouter([
             {
                 path: '/services',
                 element: <ServicesPage></ServicesPage>
+            },
+            {
+                path: '/services/:id',
+                element: <ServicesDetail></ServicesDetail>
             },
             {
                 path: '/gallery',
