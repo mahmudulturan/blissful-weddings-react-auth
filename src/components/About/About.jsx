@@ -1,4 +1,4 @@
-const AboutUs = () => {
+const About = () => {
   return (
     <div className="bg-accent">
       <div className="w-11/12 mx-auto py-10 pt-20">
@@ -53,9 +53,9 @@ const AboutUs = () => {
               </p>
             </div>
           </div>
-          <div className="flex-1 md:flex items-center justify-end">
+          <div className="flex-1 flex items-center justify-end">
             <img
-              className="rounded-md md:w-8/12 "
+              className="rounded-md w-8/12 "
               src="https://i.ibb.co/SshGy50/about.jpg"
               alt=""
             />
@@ -66,4 +66,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default About;
