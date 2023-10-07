@@ -8,11 +8,13 @@ import GalleryPage from "../pages/GalleryPage";
 import AboutPage from "../pages/AboutPage";
 import ServicesDetail from "../components/Services/ServicesDetail";
 import PrivateRoute from "../private/PrivateRoute";
+import ErrorPage from "../pages/ErrorPage";
 
 const MainRoutes = createBrowserRouter([
     {
         path: '/',
         element: <RootElement></RootElement>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
