@@ -1,0 +1,129 @@
+[
+    {
+      "id": "1",
+      "bride_name": "Emily Smith",
+      "groom_name": "John Johnson",
+      "image": "https://i.ibb.co/CQq2BTS/gallery-Image-2.jpg",
+      "marriage_date": "2022-07-15"
+    },
+    {
+      "id": "2",
+      "bride_name": "Sophia Brown",
+      "groom_name": "Daniel Davis",
+      "image": "https://i.ibb.co/m6MMkP9/gallery-Image-3.jpg",
+      "marriage_date": "2022-08-20"
+    },
+    {
+      "id": "3",
+      "bride_name": "Olivia Wilson",
+      "groom_name": "William Evans",
+      "image": "https://i.ibb.co/jTXrgjW/gallery-Image-4.jpg",
+      "marriage_date": "2022-09-10"
+    },
+    {
+      "id": "4",
+      "bride_name": "Ava Jones",
+      "groom_name": "James Harris",
+      "image": "https://i.ibb.co/sC072rc/gallery-Image-5.jpg",
+      "marriage_date": "2022-10-05"
+    },
+    {
+      "id": "5",
+      "bride_name": "Emma Lee",
+      "groom_name": "Benjamin Clark",
+      "image": "https://i.ibb.co/CPZSwyL/gallery-Image-6.jpg",
+      "marriage_date": "2022-11-15"
+    },
+    {
+      "id": "6",
+      "bride_name": "Liam Taylor",
+      "groom_name": "Sophie Anderson",
+      "image": "https://i.ibb.co/b1F8tD3/gallery-Image-7.jpg",
+      "marriage_date": "2022-12-02"
+    },
+    {
+      "id": "7",
+      "bride_name": "Noah White",
+      "groom_name": "Olivia Jackson",
+      "image": "https://i.ibb.co/fGp9pxv/gallery-Image-8.jpg",
+      "marriage_date": "2023-01-18"
+    },
+    {
+      "id": "8",
+      "bride_name": "Isabella Harris",
+      "groom_name": "Michael Thomas",
+      "image": "https://i.ibb.co/K55JWKn/galleryimage.jpg",
+      "marriage_date": "2023-02-08"
+    },
+    {
+      "id": "9",
+      "bride_name": "Charlotte Martinez",
+      "groom_name": "Elijah Anderson",
+      "image": "https://i.ibb.co/8sC8LCy/gallery-Image-10.jpg",
+      "marriage_date": "2023-03-20"
+    },
+    {
+      "id": "10",
+      "bride_name": "Amelia Davis",
+      "groom_name": "Lucas Johnson",
+      "image": "https://i.ibb.co/8MkrJKt/gallery-Image-12.jpg",
+      "marriage_date": "2023-04-10"
+    },
+    {
+      "id": "11",
+      "bride_name": "Mia Taylor",
+      "groom_name": "Matthew Brown",
+      "image": "https://i.ibb.co/KNPf6zS/gallery-Image-17.jpg",
+      "marriage_date": "2023-05-14"
+    },
+    {
+      "id": "12",
+      "bride_name": "Harper Wilson",
+      "groom_name": "Alexander Harris",
+      "image": "https://i.ibb.co/4mNnhGT/gallery-Image1.jpg",
+      "marriage_date": "2023-06-25"
+    },
+    {
+      "id": "13",
+      "bride_name": "Evelyn Jones",
+      "groom_name": "David Davis",
+      "image": "https://i.ibb.co/N1jj704/gallery-Image-1.jpg",
+      "marriage_date": "2023-07-15"
+    },
+    {
+      "id": "14",
+      "bride_name": "Abigail Clark",
+      "groom_name": "Liam White",
+      "image": "https://i.ibb.co/QJGCf8G/gallery-Image-13.jpg",
+      "marriage_date": "2023-08-20"
+    },
+    {
+      "id": "15",
+      "bride_name": "Elizabeth Evans",
+      "groom_name": "Benjamin Lee",
+      "image": "https://i.ibb.co/W0V6vxR/gallery-Image-15.jpg",
+      "marriage_date": "2023-09-10"
+    },
+    {
+      "id": "16",
+      "bride_name": "Sofia Anderson",
+      "groom_name": "Daniel Smith",
+      "image": "https://i.ibb.co/t4dSRyR/gallery-Image-16.jpg",
+      "marriage_date": "2023-10-05"
+    },
+    {
+      "id": "17",
+      "bride_name": "Avery Thomas",
+      "groom_name": "Oliver Taylor",
+      "image": "https://i.ibb.co/yk6Hg34/galerryimage99.jpg",
+      "marriage_date": "2023-11-15"
+    },
+    {
+      "id": "18",
+      "bride_name": "Scarlett Jackson",
+      "groom_name": "Henry Martinez",
+      "image": "https://i.ibb.co/ckvnQRQ/gallery-Ima.jpg",
+      "marriage_date": "2023-12-02"
+    }
+  ]
+  
