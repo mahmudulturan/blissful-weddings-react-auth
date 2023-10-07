@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 
 const BannerSlider = ({ banner }) => {
     const {title, description, bg_image} = banner;
-  console.log(banner);
   return (
     <div>
       <div
