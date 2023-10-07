@@ -13,10 +13,10 @@ const Services = () => {
         <div className="bg-primary py-10">
             <div className="w-11/12 mx-auto">
                 <div className="text-center">
-                <h3 className="text-4xl text-contrast font-bold">Our Services</h3>
-                <p className="text-lg font-medium max-w-4xl mx-auto">We're confident in our ability to exceed your expectations and make your wedding day stress-free and truly memorable. Let us take care of the details, so you can focus on celebrating your love. Your dream wedding starts here.</p>
+                <h3 className="text-3xl md:text-4xl text-contrast font-bold">Our Services</h3>
+                <p className="md:text-lg text-base font-medium max-w-4xl mx-auto">We're confident in our ability to exceed your expectations and make your wedding day stress-free and truly memorable. Let us take care of the details, so you can focus on celebrating your love. Your dream wedding starts here.</p>
                 </div>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                     {
                         services.slice(0,displayCount).map(service=> <Service key={service.id} service={service}></Service>)
                     }
