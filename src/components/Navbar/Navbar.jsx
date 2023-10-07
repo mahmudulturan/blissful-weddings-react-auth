@@ -1,7 +1,13 @@
 import { NavLink, Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
+import { BiSolidUserCircle } from "react-icons/bi";
+import toast from "react-hot-toast";
+
+
 const Navbar = () => {
-  const user = null;
+  const {user, logout} = useContext(AuthContext);
   const navLinks = [
     {
       name: "Home",
@@ -24,6 +30,7 @@ const Navbar = () => {
       path: "/about",
     },
   ];
+
   const allNavLinks = (
     <div className="flex flex-col md:flex-row gap-3">
       {navLinks.map((link) => (
@@ -42,6 +49,18 @@ const Navbar = () => {
       ))}
     </div>
   );
+
+  const handleLogOut = () => {
+    logout()
+    .then(() => {
+      toast.success('Logout Successfully')
+  })
+    .catch((error) => {
+      const errorCode = error.code;
+      toast.error(errorCode)
+    });
+  }
+
   return (
     <div>
       <div className="navbar bg-transparent w-11/12 mx-auto">
@@ -78,9 +97,14 @@ const Navbar = () => {
             user?
 
             <div className="flex items-center gap-1">
-            <img className="w-10 rounded-full border-contrast" src="" alt="" />
-          <p className="text-sm">Display Name</p>
-          <button className="bg-accent hover:bg-nature transition duration-200 py-2 px-3 rounded-md font-medium text-contrast">
+              {
+                user?.photoURL?
+                <img className="w-10 rounded-full border-contrast" src={`${user?.photoURL}`} alt="" />
+                :
+                <BiSolidUserCircle className="text-4xl text-secondery"></BiSolidUserCircle>
+              }
+          <p className="text-sm">{user?.displayName || user?.email}</p>
+          <button onClick={handleLogOut} className="bg-accent hover:bg-nature transition duration-200 py-2 px-3 rounded-md font-medium text-contrast">
             Logout
           </button>
           </div>
