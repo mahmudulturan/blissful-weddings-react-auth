@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 
 const Navbar = () => {
   const {user, logout} = useContext(AuthContext);
-  const navLinks = [
+  let navLinks = [
     {
       name: "Home",
       path: "/",
@@ -22,14 +22,38 @@ const Navbar = () => {
       path: "/gallery",
     },
     {
-      name: "Blog",
-      path: "/blog",
-    },
-    {
       name: "About",
       path: "/about",
     },
   ];
+  if(user){
+    navLinks = [
+      {
+        name: "Home",
+        path: "/",
+      },
+      {
+        name: "Services",
+        path: "/services",
+      },
+      {
+        name: "Gallery",
+        path: "/gallery",
+      },
+      {
+        name: "Blog",
+        path: "/blog",
+      },
+      {
+        name: "Contact",
+        path: "/contact",
+      },
+      {
+        name: "About",
+        path: "/about",
+      }
+    ]
+  }
 
   const allNavLinks = (
     <div className="flex flex-col md:flex-row gap-3">
@@ -47,6 +71,23 @@ const Navbar = () => {
           {link.name}
         </NavLink>
       ))}
+      {/* {
+        user && 
+        privateNavLinks.map((link) => (
+          <NavLink
+            key={link.path}
+            to={link.path}
+            className={({ isActive, isPending }) =>
+              isPending
+                ? "pending"
+                : isActive
+                ? "py-2 px-4 bg-highlight text-contrast rounded-md hover:bg-secondery font-medium transition duration-200"
+                : "py-2 px-3 bg-primary text-contrast rounded-md hover:bg-secondery font-medium transition duration-200"
+            }>
+            {link.name}
+          </NavLink>
+        ))
+      } */}
     </div>
   );
 

@@ -8,7 +8,9 @@ const RootElement = () => {
         <div className="font-jSans">
             <Toaster position="top-center" reverseOrder={false} />
             <Header></Header>
+            <div className="min-h-[93vh]">
             <Outlet></Outlet>
+            </div>
             <Footer></Footer>
         </div>
     );

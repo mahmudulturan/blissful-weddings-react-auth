@@ -9,6 +9,8 @@ import AboutPage from "../pages/AboutPage";
 import ServicesDetail from "../components/Services/ServicesDetail";
 import PrivateRoute from "../private/PrivateRoute";
 import ErrorPage from "../pages/ErrorPage";
+import BlogsPage from "../pages/BlogsPage";
+import ContactPage from "../pages/ContactPage";
 
 const MainRoutes = createBrowserRouter([
     {
@@ -27,6 +29,14 @@ const MainRoutes = createBrowserRouter([
             {
                 path: '/services/:id',
                 element: <PrivateRoute><ServicesDetail></ServicesDetail></PrivateRoute>
+            },
+            {
+                path: '/blog',
+                element: <PrivateRoute><BlogsPage></BlogsPage></PrivateRoute>
+            },
+            {
+                path: '/contact',
+                element: <PrivateRoute><ContactPage></ContactPage></PrivateRoute>
             },
             {
                 path: '/gallery',
