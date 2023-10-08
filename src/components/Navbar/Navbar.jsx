@@ -141,15 +141,25 @@ const Navbar = () => {
                     tabIndex={0}
                     className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
-                      <img className="w-10 rounded-full border-contrast"
-                    src={`${user?.photoURL}`}
-                    alt="" />
+                      {user?.photoURL ? (
+                        <img
+                          className="w-10 rounded-full border-contrast"
+                          src={`${user?.photoURL}`}
+                          alt=""
+                        />
+                      ) : (
+                        <BiSolidUserCircle className="text-4xl text-secondery"></BiSolidUserCircle>
+                      )}
                     </div>
                   </label>
                   <ul
                     tabIndex={0}
                     className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                      <li><p className="text-sm">{user?.displayName || user?.email}</p></li>
+                    <li>
+                      <p className="text-sm">
+                        {user?.displayName || user?.email}
+                      </p>
+                    </li>
                     <li>
                       <button onClick={handleLogOut}>Logout</button>
                     </li>

@@ -6,7 +6,7 @@ const ServicesDetail = () => {
     const {name, image, price, short_description, long_detail, key_features, special_features} = serviceItems;
     const {id} = useParams();
     useEffect(()=>{
-        fetch('/services.json')
+        fetch('/servicesData.json')
         .then(res=> res.json())
         .then(data=> {
             const find = data.find(item => item.id == id);
