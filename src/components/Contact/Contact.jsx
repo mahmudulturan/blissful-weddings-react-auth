@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <div data-aos="fade-up">
-      <section className="bg-primary text-contrast min-h-[93vh] flex items-center justify-center">
+      <section className="bg-primary text-contrast min-h-[93vh] py-8 flex items-center justify-center">
         <div className="px-4 mx-auto max-w-screen-md md:w-1/2">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center">
           Turning Your Wedding Dreams into Reality

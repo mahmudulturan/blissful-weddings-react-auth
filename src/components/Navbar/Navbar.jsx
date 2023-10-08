@@ -5,9 +5,8 @@ import { AuthContext } from "../../provider/AuthProvider";
 import { BiSolidUserCircle } from "react-icons/bi";
 import toast from "react-hot-toast";
 
-
 const Navbar = () => {
-  const {user, logout} = useContext(AuthContext);
+  const { user, logout } = useContext(AuthContext);
   let navLinks = [
     {
       name: "Home",
@@ -26,7 +25,7 @@ const Navbar = () => {
       path: "/about",
     },
   ];
-  if(user){
+  if (user) {
     navLinks = [
       {
         name: "Home",
@@ -51,8 +50,8 @@ const Navbar = () => {
       {
         name: "About",
         path: "/about",
-      }
-    ]
+      },
+    ];
   }
 
   const allNavLinks = (
@@ -65,46 +64,29 @@ const Navbar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "py-2 px-4 bg-highlight text-contrast rounded-md hover:bg-secondery font-medium transition duration-200"
-              : "py-2 px-3 bg-primary text-contrast rounded-md hover:bg-secondery font-medium transition duration-200"
+              ? "py-2 px-4 bg-highlight text-contrast rounded-md hover:bg-secondery hover:text-white font-medium transition duration-200"
+              : "py-2 px-3 bg-primary text-contrast rounded-md hover:bg-secondery hover:text-white font-medium transition duration-200"
           }>
           {link.name}
         </NavLink>
       ))}
-      {/* {
-        user && 
-        privateNavLinks.map((link) => (
-          <NavLink
-            key={link.path}
-            to={link.path}
-            className={({ isActive, isPending }) =>
-              isPending
-                ? "pending"
-                : isActive
-                ? "py-2 px-4 bg-highlight text-contrast rounded-md hover:bg-secondery font-medium transition duration-200"
-                : "py-2 px-3 bg-primary text-contrast rounded-md hover:bg-secondery font-medium transition duration-200"
-            }>
-            {link.name}
-          </NavLink>
-        ))
-      } */}
     </div>
   );
 
   const handleLogOut = () => {
     logout()
-    .then(() => {
-      toast.success('Logout Successfully')
-  })
-    .catch((error) => {
-      const errorCode = error.code;
-      toast.error(errorCode)
-    });
-  }
+      .then(() => {
+        toast.success("Logout Successfully");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        toast.error(errorCode);
+      });
+  };
 
   return (
     <div>
-      <div className="navbar bg-transparent w-11/12 mx-auto">
+      <div className="navbar bg-transparent md:w-11/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -134,30 +116,56 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{allNavLinks}</ul>
         </div>
         <div className="navbar-end">
-          {
-            user?
-
-            <div className="flex items-center gap-1">
-              {
-                user?.photoURL?
-                <img className="w-10 rounded-full border-contrast" src={`${user?.photoURL}`} alt="" />
-                :
-                <BiSolidUserCircle className="text-4xl text-secondery"></BiSolidUserCircle>
-              }
-          <p className="text-sm">{user?.displayName || user?.email}</p>
-          <button onClick={handleLogOut} className="bg-accent hover:bg-nature transition duration-200 py-2 px-3 rounded-md font-medium text-contrast">
-            Logout
-          </button>
-          </div>
-          :
-          <div>
-          <Link
-            className="bg-accent hover:bg-nature transition duration-200 py-2 px-3 rounded-md font-medium text-contrast"
-            to="/login">
-            Login
-          </Link>
-          </div>
-          }
+          {user ? (
+            <div>
+              <div className="hidden md:flex items-center gap-1">
+                {user?.photoURL ? (
+                  <img
+                    className="w-10 rounded-full border-contrast"
+                    src={`${user?.photoURL}`}
+                    alt=""
+                  />
+                ) : (
+                  <BiSolidUserCircle className="text-4xl text-secondery"></BiSolidUserCircle>
+                )}
+                <p className="text-sm">{user?.displayName || user?.email}</p>
+                <button
+                  onClick={handleLogOut}
+                  className="bg-accent hover:bg-nature transition duration-200 py-2 px-3 rounded-md font-medium text-contrast">
+                  Logout
+                </button>
+              </div>
+              <div className="flex md:hidden">
+                <div className="dropdown dropdown-end">
+                  <label
+                    tabIndex={0}
+                    className="btn btn-ghost btn-circle avatar">
+                    <div className="w-10 rounded-full">
+                      <img className="w-10 rounded-full border-contrast"
+                    src={`${user?.photoURL}`}
+                    alt="" />
+                    </div>
+                  </label>
+                  <ul
+                    tabIndex={0}
+                    className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li>
+                      <li><p className="text-sm">{user?.displayName || user?.email}</p></li>
+                      <button onClick={handleLogOut}>Logout</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div>
+              <Link
+                className="bg-accent hover:bg-nature transition duration-200 py-2 px-3 rounded-md font-medium text-contrast"
+                to="/login">
+                Login
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </div>
