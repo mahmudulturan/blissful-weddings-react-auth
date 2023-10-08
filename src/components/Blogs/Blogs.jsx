@@ -4,7 +4,7 @@ const Blogs = () => {
     const [blogs, setBlogs] = useState([])
     const [displayCount, setDisplayCount] = useState(15);
     useEffect(()=>{
-        fetch('/blogs.json')
+        fetch('/blogsData.json')
         .then(res => res.json())
         .then(data => setBlogs(data))
     },[])

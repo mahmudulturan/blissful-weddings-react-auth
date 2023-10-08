@@ -15,7 +15,7 @@ import { EffectFade, Pagination, Autoplay } from 'swiper/modules';
 const Banner = () => {
     const [bannerData, setBannerData] = useState([]);
     useEffect(()=>{
-        fetch('/banner.json')
+        fetch('/bannerData.json')
         .then(res=> res.json())
         .then(data=> setBannerData(data))
     },[])

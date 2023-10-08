@@ -5,7 +5,7 @@ const Services = () => {
     const [services, setServices] = useState([])
     const [displayCount, setDisplayCount] = useState(6)
     useEffect(()=>{
-        fetch('/services.json')
+        fetch('/servicesData.json')
         .then(res => res.json())
         .then(data => setServices(data))
     },[])

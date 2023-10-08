@@ -11,7 +11,7 @@ import { Grid, Autoplay } from "swiper/modules";
 const Gallery = () => {
   const [cards, setCards] = useState([]);
   useEffect(() => {
-    fetch("/gallery.json")
+    fetch("/galleryData.json")
       .then((res) => res.json())
       .then((data) => setCards(data));
   }, []);
