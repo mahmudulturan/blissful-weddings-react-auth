@@ -56,7 +56,7 @@ const Navbar = () => {
   }
 
   const allNavLinks = (
-    <div className="flex flex-col md:flex-row gap-3">
+    <div data-aos="fade-down" className="flex flex-col md:flex-row gap-3">
       {navLinks.map((link) => (
         <NavLink
           key={link.path}

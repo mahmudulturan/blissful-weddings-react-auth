@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 const Footer = () => {
   return (
-    <div className="">
+    <div className="" data-aos="fade-down">
       <div className="w-11/12 mx-auto">
       <footer className="py-10 text-base-content">
         <div className="footer">

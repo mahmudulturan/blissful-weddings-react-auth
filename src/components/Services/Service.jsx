@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
-
 const Service = ({service}) => {
     const {id, name, image, price, short_description} = service;
     return (
         <div>
-            <div className='p-2 md:h-[434px] lg:h-[495px] xl:h-[491px] 2xl:h-auto lg:p-4 shadow-md rounded-md flex flex-col justify-between flex-1'>
+            <div data-aos="zoom-in" className='p-2 md:h-[434px] lg:h-[495px] xl:h-[491px] 2xl:h-auto lg:p-4 shadow-md rounded-md flex flex-col justify-between flex-1'>
                 <div className='p-1 2xl:p-2'>
                 <img src={image} className='rounded-lg' alt={`image about ${name}`} />
                 </div>

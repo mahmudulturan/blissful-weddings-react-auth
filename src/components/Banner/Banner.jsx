@@ -24,8 +24,7 @@ const Banner = () => {
     
     return (
         
-        <div>
-
+        <div data-aos="fade-down">
             <Swiper
         autoplay={{
             delay: 2700,

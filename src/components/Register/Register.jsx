@@ -1,11 +1,12 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import toast from "react-hot-toast";
 import SocialLogin from "../Login/SocialLogin";
 
 const Register = () => {
   const { createUser} = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -21,6 +22,7 @@ const Register = () => {
     createUser(email, password)
       .then(() => {
         toast.success("Sign Up Successfully");
+        navigate('/')
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -30,7 +32,7 @@ const Register = () => {
 
 
   return (
-    <div className="min-h-[93vh] w-full flex items-center justify-center">
+    <div data-aos="zoom-in-up" className="min-h-[93vh] w-full flex items-center justify-center">
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-primary">
         <h1 className="text-2xl font-bold text-center">Sign Up</h1>
         <form onSubmit={handleRegister} className="space-y-6">

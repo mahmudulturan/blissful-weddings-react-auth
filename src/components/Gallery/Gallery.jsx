@@ -18,7 +18,7 @@ const Gallery = () => {
 
   return (
     <div>
-      <div className="text-center my-8">
+      <div data-aos="fade-right" className="text-center my-8">
         <h3 className="text-3xl md:text-4xl text-contrast font-bold">
           Success in Every Frame
         </h3>
@@ -27,27 +27,27 @@ const Gallery = () => {
           projects. These photos showcase our dedication to excellence.
         </p>
       </div>
-      <div className="">
-      <Swiper
-        loop={true}
-        slidesPerView={3}
-        grid={{
-          rows: 2,
-          fill: 'row'
-        }}
-        autoplay={{
+      <div className="" data-aos="fade-right">
+        <Swiper
+          loop={true}
+          slidesPerView={3}
+          grid={{
+            rows: 2,
+            fill: "row",
+          }}
+          autoplay={{
             delay: 2000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
-            
           }}
-        spaceBetween={0}
-        modules={[Grid, Autoplay]}
-        className="mySwiper"
-      >
-        {cards.map((card) => (
-            <SwiperSlide key={card.id}><GalleryCard card={card}></GalleryCard></SwiperSlide>
-        ))}
+          spaceBetween={0}
+          modules={[Grid, Autoplay]}
+          className="mySwiper">
+          {cards.map((card) => (
+            <SwiperSlide key={card.id}>
+              <GalleryCard card={card}></GalleryCard>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>

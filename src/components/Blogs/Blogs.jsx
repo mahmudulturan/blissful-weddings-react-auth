@@ -9,7 +9,7 @@ const Blogs = () => {
         .then(data => setBlogs(data))
     },[])
     return (
-        <div className='w-11/12 mx-auto my-10'>
+        <div data-aos="fade-right" className='w-11/12 mx-auto my-10'>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7'>
                 {
                     blogs.slice(0,displayCount).map(blog => <BlogCard key={blog.id} blog={blog}></BlogCard>)

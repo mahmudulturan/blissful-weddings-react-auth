@@ -1,19 +1,23 @@
 import { useContext } from "react";
 import toast from "react-hot-toast";
 import { AuthContext } from "../../provider/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 const SocialLogin = () => {
-    const { googleLogin, githubLogin } = useContext(AuthContext);
-    const handleSocialLogin = (method) => {
-        method()
-          .then(() => {
-            toast.success("Sign Up Successfully");
-          })
-          .catch((error) => {
-            const errorCode = error.code;
-            toast.error(errorCode);
-          });
-      };
+  const navigate = useNavigate();
+
+  const { googleLogin, githubLogin } = useContext(AuthContext);
+  const handleSocialLogin = (method) => {
+    method()
+      .then(() => {
+        toast.success("Sign Up Successfully");
+        navigate('/')
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        toast.error(errorCode);
+      });
+  };
   return (
     <div>
       <div className="flex items-center pt-4 space-x-1">

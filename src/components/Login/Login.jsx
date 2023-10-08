@@ -1,30 +1,30 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import toast from "react-hot-toast";
 import SocialLogin from "./SocialLogin";
 
 const Login = () => {
   const { loginUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     loginUser(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
         toast.success('Login Successfully')
+        navigate('/')
     })
       .catch((error) => {
-        console.log(error.code);
         const errorCode = error.code;
         toast.error(errorCode)
       });
   };
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center">
+    <div data-aos="zoom-in-up" className="min-h-[93vh] w-full flex items-center justify-center">
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-primary">
         <h1 className="text-2xl font-bold text-center">Login</h1>
         <form onSubmit={handleLogin} className="space-y-6">

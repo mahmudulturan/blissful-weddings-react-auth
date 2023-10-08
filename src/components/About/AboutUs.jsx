@@ -1,7 +1,7 @@
 const AboutUs = () => {
   return (
     <div className="bg-accent">
-      <div className="w-11/12 mx-auto py-10 pt-20">
+      <div data-aos="fade-down" className="w-11/12 mx-auto py-10 pt-20">
         <div
           className="hero min-h-[35vh] rounded-md"
           style={{
@@ -21,7 +21,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 my-6">
+        <div data-aos="fade-up" className="flex flex-col md:flex-row justify-between items-center gap-6 my-6">
           <div className="flex-1">
             <h1 className="text-4xl border-b-8 border-contrast">Our Mission</h1>
             <div className="font-medium text-xl space-y-6 my-6">

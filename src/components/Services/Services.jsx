@@ -10,7 +10,7 @@ const Services = () => {
         .then(data => setServices(data))
     },[])
     return (
-        <div className="bg-primary py-10">
+        <div className="bg-primary py-10" data-aos="fade-up">
             <div className="w-11/12 mx-auto">
                 <div className="text-center">
                 <h3 className="text-3xl md:text-4xl text-contrast font-bold">Our Services</h3>
